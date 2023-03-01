@@ -6,7 +6,7 @@ inputEl.addEventListener("input", onOutputChange);
 function onOutputChange(event) {
   outputEl.textContent = event.currentTarget.value.trim();
 
-  if (event.currentTarget.value === "") {
+  if (event.currentTarget.value.trim() === "") {
     outputEl.textContent = "Anonymous";
   }
 }
