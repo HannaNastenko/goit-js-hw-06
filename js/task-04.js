@@ -4,11 +4,14 @@ const ref = {
   span: document.querySelector("#value"),
 };
 
+let counterValue = 0;
+
 ref.decrement.addEventListener("click", () => {
-  ref.span.textContent -= 1;
+  counterValue -= 1;
+  ref.span.textContent = counterValue;
 });
 
 ref.increment.addEventListener("click", () => {
-  let counterValue = parseInt(ref.span.textContent);
-  ref.span.textContent = counterValue + 1;
+  counterValue += 1;
+  ref.span.textContent = counterValue;
 });
